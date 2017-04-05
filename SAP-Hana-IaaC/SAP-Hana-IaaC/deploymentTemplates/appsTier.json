@@ -85,7 +85,25 @@
             "vhd": {
               "uri": "[concat('https://', variables('stgAccountName'), '.blob.core.windows.net/vhds/', parameters('appsTierSettings').vmSettings.vmName, '-OSDisk.vhd')]"
             }
-          }
+          },
+
+          "dataDisks": [
+            {
+              "name": "[concat(parameters('appsTierSettings').vmSettings.vmName, '-DataDisk-01')]",
+              "caching": "None",
+              "lun": 0,
+              "diskSizeGB": "[parameters('appsTierSettings').vmSettings.dataDiskSizeGB]",
+              "createOption": "Empty",
+              "vhd": {
+                "uri": "[concat('https://', variables('stgAccountName'), '.blob.core.windows.net/vhds/', parameters('appsTierSettings').vmSettings.vmName, '-DataDisk-01.vhd')]"
+              }
+            }
+          ]
+
+
+
+
+
         },
         "networkProfile": {
           "networkInterfaces": [

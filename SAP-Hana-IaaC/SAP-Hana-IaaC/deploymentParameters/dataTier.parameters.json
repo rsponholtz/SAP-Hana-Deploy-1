@@ -7,26 +7,25 @@
         "name": "dataTier",
         "vmSettings": {
           "vmName": "sapHanaDB",
-          "virtualNetworkResourceGroupName": "saptest2",
-          "virtualNetworkName": "saptest2-vnet",
+          "virtualNetworkResourceGroupName": "sap-infra-coop",
+          "virtualNetworkName": "sap-coop-vnet",
           "subnetName": "default",
           "privateIpAddresses": [
-            "10.1.2.21",
-            "10.1.2.22"
+            "10.3.0.10",
+            "10.3.0.11"
           ],
           "vmSize": "Standard_DS13_v2",
           "vmUsername": "adminuser",
           "vmPassword": "9f2X7y29YuGq",
           "image": {
-            "publisher": "Redhat",
-            "offer": "RHEL",
-            "sku": "7.2",
-            "version": "latest"
+                        "publisher": "SUSE",
+                        "offer": "SLES-SAP-BYOS",
+                        "sku": "12-SP2",
+                        "version": "latest"
           },
           "dataDiskSizeGB": "512"
         },
         "stgAccountNamePrefix": "sapstg",
-        "puppetServerIpAddress": "10.1.2.5"
       }
     }
   }

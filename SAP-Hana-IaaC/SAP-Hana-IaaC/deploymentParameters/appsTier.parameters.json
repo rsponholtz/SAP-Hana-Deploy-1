@@ -7,8 +7,8 @@
         "name": "appsTier",
         "vmSettings": {
           "vmName": "sapErpCI",
-          "virtualNetworkResourceGroupName": "saptest2",
-          "virtualNetworkName": "saptest2-vnet",
+          "virtualNetworkResourceGroupName": "sap-infra-coop",
+          "virtualNetworkName": "sap-coop-vnet",
           "subnetName": "default",
           "privateIpAddresses": [
             "10.3.0.20",
